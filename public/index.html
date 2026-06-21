@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Typeahead</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Search Typeahead</h1>
+
+    <div class="search-box">
+      <input
+        id="searchInput"
+        type="text"
+        placeholder="Start typing... (e.g. iphone, laptop, java)"
+        autocomplete="off"
+      />
+      <button id="searchBtn">Search</button>
+      <div id="suggestions" class="suggestions hidden"></div>
+    </div>
+
+    <div class="ranking">
+      <span>Suggestion ranking:</span>
+      <div class="toggle">
+        <button id="rankPopular" class="active">Popular (all time)</button>
+        <button id="rankRecent">Recent (recency aware)</button>
+      </div>
+    </div>
+
+    <div id="status" class="status"></div>
+
+    <div id="searchResult" class="result hidden"></div>
+
+    <div class="panels">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>Trending</h2>
+          <div class="toggle">
+            <button id="trendBasic" class="active">Basic</button>
+            <button id="trendEnhanced">Recent</button>
+          </div>
+        </div>
+        <ul id="trendingList" class="list"></ul>
+      </div>
+
+      <div class="panel">
+        <h2>Cache debug</h2>
+        <p class="hint">Shows which cache node owns the current prefix and if it is a hit or miss.</p>
+        <pre id="cacheDebug" class="debug">type something above</pre>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
