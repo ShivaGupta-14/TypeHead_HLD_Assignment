@@ -1,0 +1,4 @@
+node_modules/
+scratch_server.log
+*.log
+data/queries.csv

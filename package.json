@@ -1,0 +1,15 @@
+{
+  "name": "search-typeahead-system",
+  "version": "1.0.0",
+  "description": "HLD assignment: distributed search typeahead with consistent-hashed cache, trending searches and batch writes",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "download": "node scripts/downloadDataset.js",
+    "gen": "node scripts/generateDataset.js",
+    "benchmark": "node scripts/benchmark.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
